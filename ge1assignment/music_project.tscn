@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bokpgq6ycxl13"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5kplc"]
+size = Vector2(50, 50)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_tjo3b"]
+
+[node name="MusicProject" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="Ground" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("PlaneMesh_5kplc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("WorldBoundaryShape3D_tjo3b")
