@@ -1,15 +1,143 @@
-[gd_scene format=3 uid="uid://bokpgq6ycxl13"]
+[gd_scene load_steps=17 format=3 uid="uid://bokpgq6ycxl13"]
+
+[ext_resource type="Script" path="res://music_project.gd" id="1_ytprx"]
+[ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="2_w06fw"]
+[ext_resource type="Script" path="res://addons/godot-xr-tools/player/player_body.gd" id="3_nmqv4"]
+[ext_resource type="Script" path="res://sequencer.gd" id="4_3emqg"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xx843"]
+radius = 0.01
+
+[sub_resource type="SphereMesh" id="SphereMesh_qf8kt"]
+radius = 0.02
+height = 0.04
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_uct5a"]
+radius = 0.01
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1w2lr"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_d1eg7"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_6vqkh"]
+radius = 0.02
+height = 0.04
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_unqex"]
+radius = 0.02
+
+[sub_resource type="SphereMesh" id="SphereMesh_w02j5"]
+radius = 0.02
+height = 0.04
+
+[sub_resource type="SphereMesh" id="SphereMesh_3amn3"]
+radius = 0.02
+height = 0.04
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fmmes"]
+size = Vector2(100, 100)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_et5ep"]
+
+[sub_resource type="Environment" id="Environment_cvea8"]
+ambient_light_color = Color(0.775063, 0.775063, 0.775063, 1)
 
 [node name="MusicProject" type="Node3D"]
+script = ExtResource("1_ytprx")
 
-[node name="XROrigin3D" type="XROrigin3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.486978, -0.857167, -0.16768, -0.325568, -1.4231e-08, 0.945518, -0.810468, 0.515038, -0.279066, 0, 0, 0)
 
-[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+[node name="player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
-[node name="Left" type="XRNode3D" parent="XROrigin3D"]
+[node name="XROrigin" type="XROrigin3D" parent="player"]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="player/XROrigin"]
+
+[node name="left" type="XRController3D" parent="player/XROrigin"]
+tracker = &"left_hand"
+
+[node name="MovementDirect" parent="player/XROrigin/left" instance=ExtResource("2_w06fw")]
+
+[node name="Area3D" type="Area3D" parent="player/XROrigin/left"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="player/XROrigin/left/Area3D"]
+shape = SubResource("SphereShape3D_xx843")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="player/XROrigin/left"]
+mesh = SubResource("SphereMesh_qf8kt")
+
+[node name="right" type="XRController3D" parent="player/XROrigin"]
 tracker = &"right_hand"
-pose = &"aim"
 
-[node name="Right" type="XRNode3D" parent="XROrigin3D"]
-tracker = &"right_hand"
-pose = &"aim"
+[node name="Area3D" type="Area3D" parent="player/XROrigin/right"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="player/XROrigin/right/Area3D"]
+shape = SubResource("SphereShape3D_uct5a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="player/XROrigin/right"]
+mesh = SubResource("SphereMesh_qf8kt")
+
+[node name="XRToolsPlayerBody" type="CharacterBody3D" parent="player/XROrigin"]
+top_level = true
+script = ExtResource("3_nmqv4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="player/XROrigin/XRToolsPlayerBody"]
+shape = SubResource("CapsuleShape3D_1w2lr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="player"]
+shape = SubResource("CapsuleShape3D_d1eg7")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(-0.220772, -0.975312, -0.00516406, 0.254535, -0.0627264, 0.965027, -0.941526, 0.211737, 0.2621, -4.2177, 1.84116, -4.5774)
+light_energy = 16.0
+
+[node name="start_stop" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.689672, 2.5, 0.665063)
+
+[node name="mesh" type="MeshInstance3D" parent="start_stop"]
+mesh = SubResource("SphereMesh_6vqkh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="start_stop"]
+shape = SubResource("SphereShape3D_unqex")
+
+[node name="sequencer" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.548, 2.5, 0.936)
+script = ExtResource("4_3emqg")
+
+[node name="Timer" type="Timer" parent="sequencer"]
+wait_time = 0.05
+autostart = true
+
+[node name="timer_ball" type="MeshInstance3D" parent="sequencer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+mesh = SubResource("SphereMesh_w02j5")
+
+[node name="sequencer2" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.561553, 2.5, 0.665063)
+script = ExtResource("4_3emqg")
+
+[node name="Timer" type="Timer" parent="sequencer2"]
+wait_time = 0.125
+
+[node name="timer_ball" type="MeshInstance3D" parent="sequencer2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+mesh = SubResource("SphereMesh_3amn3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(-0.486978, -0.857167, -0.16768, -0.325568, -1.40366e-07, 0.945519, -0.810468, 0.515038, -0.279066, 0, 0, 0)
+
+[node name="ground" type="MeshInstance3D" parent="StaticBody3D"]
+visible = false
+mesh = SubResource("PlaneMesh_fmmes")
+skeleton = NodePath("../../DirectionalLight3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("WorldBoundaryShape3D_et5ep")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_cvea8")
+
+[connection signal="timeout" from="sequencer/Timer" to="sequencer" method="_on_timer_timeout"]
+[connection signal="timeout" from="sequencer2/Timer" to="sequencer2" method="_on_timer_timeout"]
