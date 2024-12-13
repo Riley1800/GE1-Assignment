@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ce3fwv7fk6svl"
+path="res://.godot/imported/wall-corner-rounded.obj-466a6d0cb30b6fa433711d21f9c43bda.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wall-corner-rounded.obj-466a6d0cb30b6fa433711d21f9c43bda.mesh"]
+
+source_file="res://addons/kenney_prototype-kit/Models/OBJ format/wall-corner-rounded.obj"
+dest_files=["res://.godot/imported/wall-corner-rounded.obj-466a6d0cb30b6fa433711d21f9c43bda.mesh", "res://.godot/imported/wall-corner-rounded.obj-466a6d0cb30b6fa433711d21f9c43bda.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

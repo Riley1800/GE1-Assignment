@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dm5wc5akwk3hr"
+path="res://.godot/imported/animal-bison.obj-ce62d85ca9db9aee9b862bac0013608e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/animal-bison.obj-ce62d85ca9db9aee9b862bac0013608e.mesh"]
+
+source_file="res://addons/kenney_prototype-kit/Models/OBJ format/animal-bison.obj"
+dest_files=["res://.godot/imported/animal-bison.obj-ce62d85ca9db9aee9b862bac0013608e.mesh", "res://.godot/imported/animal-bison.obj-ce62d85ca9db9aee9b862bac0013608e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

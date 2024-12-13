@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://beo2bmd2m2map"
+path="res://.godot/imported/indicator-round-b.obj-4872b58deeea28230963787c0edf7581.mesh"
+
+[deps]
+
+files=["res://.godot/imported/indicator-round-b.obj-4872b58deeea28230963787c0edf7581.mesh"]
+
+source_file="res://addons/kenney_prototype-kit/Models/OBJ format/indicator-round-b.obj"
+dest_files=["res://.godot/imported/indicator-round-b.obj-4872b58deeea28230963787c0edf7581.mesh", "res://.godot/imported/indicator-round-b.obj-4872b58deeea28230963787c0edf7581.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

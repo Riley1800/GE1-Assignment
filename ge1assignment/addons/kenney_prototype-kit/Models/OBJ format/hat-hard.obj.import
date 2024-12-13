@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dx082pgel7hh3"
+path="res://.godot/imported/hat-hard.obj-4a7297d91d0740bbcb9a9988e7177bbb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/hat-hard.obj-4a7297d91d0740bbcb9a9988e7177bbb.mesh"]
+
+source_file="res://addons/kenney_prototype-kit/Models/OBJ format/hat-hard.obj"
+dest_files=["res://.godot/imported/hat-hard.obj-4a7297d91d0740bbcb9a9988e7177bbb.mesh", "res://.godot/imported/hat-hard.obj-4a7297d91d0740bbcb9a9988e7177bbb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

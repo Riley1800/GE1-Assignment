@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3l15svf62m7b"]
+
+[ext_resource type="PackedScene" uid="uid://spvkk44hig6j" path="res://addons/kenney_prototype-kit/Models/GLB format/column-rounded-low.glb" id="1_p4g8l"]
+[ext_resource type="PackedScene" uid="uid://dmmrvk37qelgb" path="res://addons/kenney_prototype-kit/Models/GLB format/column-low.glb" id="2_2s5i4"]
+[ext_resource type="PackedScene" uid="uid://dmyskn8bdwp1p" path="res://addons/kenney_prototype-kit/Models/GLB format/button-floor-round-small.glb" id="3_o7sx3"]
+[ext_resource type="Script" path="res://addons/kenney_prototype-kit/Models/GLB format/button1.gd" id="4_ml116"]
+
+[node name="Sequencer" type="Node3D"]
+
+[node name="column-rounded-low2" parent="." instance=ExtResource("1_p4g8l")]
+transform = Transform3D(0.000157118, 0, 1, 0, 1, 0, -1, 0, 0.000157118, 0.501012, -3.016e-05, 0.25866)
+
+[node name="column-rounded-low3" parent="." instance=ExtResource("1_p4g8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0544888, 0, 0.24371)
+
+[node name="column-low2" parent="." instance=ExtResource("2_2s5i4")]
+transform = Transform3D(1, 0, 0, 0, 0.999964, -0.00842984, 0, 0.00842984, 0.999964, 0.22474, 0.000427216, 0.352207)
+
+[node name="button-floor-round-small2" parent="column-low2" instance=ExtResource("3_o7sx3")]
+transform = Transform3D(0.1, 0, 0, 0, 0.0994271, -0.0106889, 0, 0.0106889, 0.0994271, -0.0327538, 0.500539, 0.0691821)
+script = ExtResource("4_ml116")

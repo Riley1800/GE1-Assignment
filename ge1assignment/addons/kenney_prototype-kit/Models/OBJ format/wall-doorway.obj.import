@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bf1tcs0cpwgy"
+path="res://.godot/imported/wall-doorway.obj-57e95c4ae9ed3568fe4fdcb1e09c95bb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wall-doorway.obj-57e95c4ae9ed3568fe4fdcb1e09c95bb.mesh"]
+
+source_file="res://addons/kenney_prototype-kit/Models/OBJ format/wall-doorway.obj"
+dest_files=["res://.godot/imported/wall-doorway.obj-57e95c4ae9ed3568fe4fdcb1e09c95bb.mesh", "res://.godot/imported/wall-doorway.obj-57e95c4ae9ed3568fe4fdcb1e09c95bb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://378q6apstm7p"
+path="res://.godot/imported/wall-window-barred-small.obj-d8f5778b61b2ec7b6e0f2d2ee747e38f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wall-window-barred-small.obj-d8f5778b61b2ec7b6e0f2d2ee747e38f.mesh"]
+
+source_file="res://addons/kenney_prototype-kit/Models/OBJ format/wall-window-barred-small.obj"
+dest_files=["res://.godot/imported/wall-window-barred-small.obj-d8f5778b61b2ec7b6e0f2d2ee747e38f.mesh", "res://.godot/imported/wall-window-barred-small.obj-d8f5778b61b2ec7b6e0f2d2ee747e38f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

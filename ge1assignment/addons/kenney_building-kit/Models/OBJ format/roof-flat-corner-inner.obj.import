@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b1k7ec07b7ul8"
+path="res://.godot/imported/roof-flat-corner-inner.obj-0c639168fa4fc4a7208a3b3723bffd60.mesh"
+
+[deps]
+
+files=["res://.godot/imported/roof-flat-corner-inner.obj-0c639168fa4fc4a7208a3b3723bffd60.mesh"]
+
+source_file="res://addons/kenney_building-kit/Models/OBJ format/roof-flat-corner-inner.obj"
+dest_files=["res://.godot/imported/roof-flat-corner-inner.obj-0c639168fa4fc4a7208a3b3723bffd60.mesh", "res://.godot/imported/roof-flat-corner-inner.obj-0c639168fa4fc4a7208a3b3723bffd60.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

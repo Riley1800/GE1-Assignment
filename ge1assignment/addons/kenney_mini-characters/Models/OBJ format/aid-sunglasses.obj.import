@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cwc3vhsvow61i"
+path="res://.godot/imported/aid-sunglasses.obj-70e09292a7d40879ed4e346079f03792.mesh"
+
+[deps]
+
+files=["res://.godot/imported/aid-sunglasses.obj-70e09292a7d40879ed4e346079f03792.mesh"]
+
+source_file="res://addons/kenney_mini-characters/Models/OBJ format/aid-sunglasses.obj"
+dest_files=["res://.godot/imported/aid-sunglasses.obj-70e09292a7d40879ed4e346079f03792.mesh", "res://.godot/imported/aid-sunglasses.obj-70e09292a7d40879ed4e346079f03792.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

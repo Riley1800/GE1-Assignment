@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d10lmimnfqcpk"
+path="res://.godot/imported/shape-slope.obj-825f6b6f3c850a5e864181832f10f9eb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/shape-slope.obj-825f6b6f3c850a5e864181832f10f9eb.mesh"]
+
+source_file="res://addons/kenney_prototype-kit/Models/OBJ format/shape-slope.obj"
+dest_files=["res://.godot/imported/shape-slope.obj-825f6b6f3c850a5e864181832f10f9eb.mesh", "res://.godot/imported/shape-slope.obj-825f6b6f3c850a5e864181832f10f9eb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

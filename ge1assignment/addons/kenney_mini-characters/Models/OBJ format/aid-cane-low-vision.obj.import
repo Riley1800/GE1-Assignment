@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dy5lfi6mt1c6i"
+path="res://.godot/imported/aid-cane-low-vision.obj-9ae76a2cd74906e7b2fdc9985008d622.mesh"
+
+[deps]
+
+files=["res://.godot/imported/aid-cane-low-vision.obj-9ae76a2cd74906e7b2fdc9985008d622.mesh"]
+
+source_file="res://addons/kenney_mini-characters/Models/OBJ format/aid-cane-low-vision.obj"
+dest_files=["res://.godot/imported/aid-cane-low-vision.obj-9ae76a2cd74906e7b2fdc9985008d622.mesh", "res://.godot/imported/aid-cane-low-vision.obj-9ae76a2cd74906e7b2fdc9985008d622.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

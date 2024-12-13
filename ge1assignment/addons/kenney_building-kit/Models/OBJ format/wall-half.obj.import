@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://muicldu2k6tx"
+path="res://.godot/imported/wall-half.obj-c13a65b511c102e83d5da22f35d0e12e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wall-half.obj-c13a65b511c102e83d5da22f35d0e12e.mesh"]
+
+source_file="res://addons/kenney_building-kit/Models/OBJ format/wall-half.obj"
+dest_files=["res://.godot/imported/wall-half.obj-c13a65b511c102e83d5da22f35d0e12e.mesh", "res://.godot/imported/wall-half.obj-c13a65b511c102e83d5da22f35d0e12e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

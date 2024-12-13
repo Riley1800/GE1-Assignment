@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cp463wmjduidy"
+path="res://.godot/imported/shape-hollow-hexagon.obj-57336464b99b667ffde3848f64f6051a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/shape-hollow-hexagon.obj-57336464b99b667ffde3848f64f6051a.mesh"]
+
+source_file="res://addons/kenney_prototype-kit/Models/OBJ format/shape-hollow-hexagon.obj"
+dest_files=["res://.godot/imported/shape-hollow-hexagon.obj-57336464b99b667ffde3848f64f6051a.mesh", "res://.godot/imported/shape-hollow-hexagon.obj-57336464b99b667ffde3848f64f6051a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

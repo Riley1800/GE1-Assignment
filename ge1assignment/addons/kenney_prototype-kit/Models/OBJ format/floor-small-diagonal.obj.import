@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ij841bwyv7ak"
+path="res://.godot/imported/floor-small-diagonal.obj-a3082dd87a5b4de90a950f8cda45ed74.mesh"
+
+[deps]
+
+files=["res://.godot/imported/floor-small-diagonal.obj-a3082dd87a5b4de90a950f8cda45ed74.mesh"]
+
+source_file="res://addons/kenney_prototype-kit/Models/OBJ format/floor-small-diagonal.obj"
+dest_files=["res://.godot/imported/floor-small-diagonal.obj-a3082dd87a5b4de90a950f8cda45ed74.mesh", "res://.godot/imported/floor-small-diagonal.obj-a3082dd87a5b4de90a950f8cda45ed74.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

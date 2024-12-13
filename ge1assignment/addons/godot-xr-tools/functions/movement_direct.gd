@@ -1,5 +1,5 @@
 @tool
-class_name XRToolsMovementDirect
+#class_name XRToolsMovementDirect
 extends XRToolsMovementProvider
 
 

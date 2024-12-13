@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://7det8r002tvf"
+path="res://.godot/imported/animal-horse.obj-8181075a3c24a50ca172125eef8fb105.mesh"
+
+[deps]
+
+files=["res://.godot/imported/animal-horse.obj-8181075a3c24a50ca172125eef8fb105.mesh"]
+
+source_file="res://addons/kenney_prototype-kit/Models/OBJ format/animal-horse.obj"
+dest_files=["res://.godot/imported/animal-horse.obj-8181075a3c24a50ca172125eef8fb105.mesh", "res://.godot/imported/animal-horse.obj-8181075a3c24a50ca172125eef8fb105.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

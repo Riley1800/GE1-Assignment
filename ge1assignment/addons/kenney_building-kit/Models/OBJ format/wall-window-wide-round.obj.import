@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://didtkgmyl7ine"
+path="res://.godot/imported/wall-window-wide-round.obj-bac9b5968cffe8d75d4783f8f84f0eba.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wall-window-wide-round.obj-bac9b5968cffe8d75d4783f8f84f0eba.mesh"]
+
+source_file="res://addons/kenney_building-kit/Models/OBJ format/wall-window-wide-round.obj"
+dest_files=["res://.godot/imported/wall-window-wide-round.obj-bac9b5968cffe8d75d4783f8f84f0eba.mesh", "res://.godot/imported/wall-window-wide-round.obj-bac9b5968cffe8d75d4783f8f84f0eba.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

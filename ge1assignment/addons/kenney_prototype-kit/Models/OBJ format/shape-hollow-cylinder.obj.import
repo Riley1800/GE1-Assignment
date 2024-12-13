@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bs563jg6w2hop"
+path="res://.godot/imported/shape-hollow-cylinder.obj-9eda87b2554139513839c1bc4e37a545.mesh"
+
+[deps]
+
+files=["res://.godot/imported/shape-hollow-cylinder.obj-9eda87b2554139513839c1bc4e37a545.mesh"]
+
+source_file="res://addons/kenney_prototype-kit/Models/OBJ format/shape-hollow-cylinder.obj"
+dest_files=["res://.godot/imported/shape-hollow-cylinder.obj-9eda87b2554139513839c1bc4e37a545.mesh", "res://.godot/imported/shape-hollow-cylinder.obj-9eda87b2554139513839c1bc4e37a545.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
