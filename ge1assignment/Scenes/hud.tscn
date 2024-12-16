@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://cce1y0vsvl25c"]
+
+[ext_resource type="Script" path="res://Scripts/hud.gd" id="1_xwbrr"]
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="3_ftqy6"]
+[ext_resource type="Texture2D" uid="uid://cq4c35i7ewlvv" path="res://addons/kenney_onscreen-controls/Sprites/flat-dark/flatDark16.png" id="6_3tfhf"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_xwbrr")
+
+[node name="Interact" type="TouchScreenButton" parent="."]
+position = Vector2(958, 184)
+scale = Vector2(2.85417, 2.45833)
+texture_normal = ExtResource("6_3tfhf")
+
+[node name="VirtualJoystickMove" parent="." instance=ExtResource("3_ftqy6")]
+action_left = "move__left"
+action_right = "move_right"
+action_up = "move_forward"
+action_down = "move_back"
+
+[node name="VirtualJoystickCamera" parent="." instance=ExtResource("3_ftqy6")]
+offset_left = 850.0
+offset_top = -302.0
+offset_right = 1150.0
+offset_bottom = -2.0
+action_left = "look_left"
+action_right = "look_right"
+action_up = "look_up"
+action_down = "look_down"
+
+[connection signal="pressed" from="Interact" to="." method="_on_interact_pressed"]
+[connection signal="released" from="Interact" to="." method="_on_interact_released"]
