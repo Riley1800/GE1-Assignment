@@ -74,7 +74,11 @@ mesh = SubResource("BoxMesh_x6n7m")
 
 [node name="InstrumentSelector" parent="TheWall" instance=ExtResource("6_141y4")]
 
+[node name="Label3D" type="Label3D" parent="TheWall/InstrumentSelector"]
+
 [node name="StepSelector" parent="TheWall" instance=ExtResource("7_tback")]
+
+[node name="Label3D" type="Label3D" parent="TheWall/StepSelector"]
 
 [connection signal="on_state_changed" from="16Step" to="column-low2/StepCount16" method="_on_button_variation_on_state_changed"]
 [connection signal="on_state_changed" from="8Step" to="column-low2/StepCount16" method="_on_button_variation_on_state_changed"]

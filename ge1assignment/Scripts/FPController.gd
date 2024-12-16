@@ -2,7 +2,7 @@ extends Node3D
 
 @export var score: int = 0
 @export var speed: float = 10
-@export var rot_speed: float = 10
+@export var rot_speed: float = 100
 @export var can_move: bool = true
 
 var controlling: bool = true
@@ -27,7 +27,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	# Rotation based on axis input (joystick or keyboard)
-	var yaw = Input.get_axis("look_left", "look_right")  # Left/Right rotation (look_left, look_right)
+	var yaw = Input.get_axis("look_right", "look_left")  # Left/Right rotation (look_left, look_right)
 	var pitch = Input.get_axis("look_up", "look_down")  # Up/Down rotation (look_up, look_down)
 
 	# Apply the rotation to the player

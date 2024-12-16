@@ -116,4 +116,8 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("6_p8m52")
 
+[node name="Instruments_marker" type="Marker3D" parent="."]
+
+[node name="steps_marker" type="Marker3D" parent="."]
+
 [connection signal="timeout" from="sequencer2/Timer" to="sequencer2" method="_on_timer_timeout"]
