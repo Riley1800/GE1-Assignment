@@ -1,13 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://c3l15svf62m7b"]
+[gd_scene load_steps=7 format=3 uid="uid://c3l15svf62m7b"]
 
 [ext_resource type="PackedScene" uid="uid://spvkk44hig6j" path="res://addons/kenney_prototype-kit/Models/GLB format/column-rounded-low.glb" id="1_p4g8l"]
-[ext_resource type="Script" path="res://Scripts/sequencer.gd" id="1_vjbj3"]
 [ext_resource type="PackedScene" uid="uid://dmmrvk37qelgb" path="res://addons/kenney_prototype-kit/Models/GLB format/column-low.glb" id="2_2s5i4"]
 [ext_resource type="PackedScene" uid="uid://dmyskn8bdwp1p" path="res://addons/kenney_prototype-kit/Models/GLB format/button-floor-round-small.glb" id="3_o7sx3"]
 [ext_resource type="Script" path="res://addons/kenney_prototype-kit/Models/GLB format/button1.gd" id="4_ml116"]
+[ext_resource type="PackedScene" path="res://Scenes/ButtonVariation.tscn" id="5_mhsd7"]
+[ext_resource type="Script" path="res://Scripts/InteractiveButton.gd" id="6_42hk2"]
 
 [node name="Sequencer" type="Marker3D"]
-script = ExtResource("1_vjbj3")
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 
 [node name="column-rounded-low2" parent="." instance=ExtResource("1_p4g8l")]
 transform = Transform3D(0.000157118, 0, 1, 0, 1, 0, -1, 0, 0.000157118, 0.501012, -3.016e-05, 0.25866)
@@ -42,14 +43,18 @@ script = ExtResource("4_ml116")
 [node name="column-low2" parent="." instance=ExtResource("2_2s5i4")]
 transform = Transform3D(1, 0, 0, 0, 0.999964, -0.00842984, 0, 0.00842984, 0.999964, 0.22474, 0.000427216, 0.352207)
 
-[node name="button1" parent="column-low2" instance=ExtResource("3_o7sx3")]
+[node name="StepCount8" parent="column-low2" instance=ExtResource("3_o7sx3")]
 transform = Transform3D(0.1, 0, 0, 0, 0.0994271, -0.0106889, 0, 0.0106889, 0.0994271, -0.0384808, 0.499635, -0.0380077)
 script = ExtResource("4_ml116")
 
-[node name="button2" parent="column-low2" instance=ExtResource("3_o7sx3")]
+[node name="StepCount16" parent="column-low2" instance=ExtResource("3_o7sx3")]
 transform = Transform3D(0.1, 0, 0, 0, 0.0994271, -0.0106889, 0, 0.0106889, 0.0994271, -0.0327538, 0.500539, 0.0691821)
 script = ExtResource("4_ml116")
 
-[node name="button3" parent="column-low2" instance=ExtResource("3_o7sx3")]
+[node name="BPM" parent="column-low2" instance=ExtResource("3_o7sx3")]
 transform = Transform3D(0.1, 0, 0, 0, 0.0994271, -0.0106889, 0, 0.0106889, 0.0994271, 0.0492176, 0.499821, -0.0159391)
 script = ExtResource("4_ml116")
+
+[node name="ButtonVariation" parent="." instance=ExtResource("5_mhsd7")]
+transform = Transform3D(-0.983041, 0, 0.183385, 0, 1, 0, -0.183385, 0, -0.983041, -0.0717831, 0.238695, 0.332821)
+script = ExtResource("6_42hk2")

@@ -1,12 +1,12 @@
 extends Node3D
 
-@export var score = 0
-@export var speed:float = 10
-@export var rot_speed =0.5
-@export var can_move:bool = true
+@export var score: int = 0
+@export var speed: float = 10
+@export var rot_speed: float = 10
+@export var can_move: bool = true
 
-var controlling = true
-var relative:Vector2 = Vector2.ZERO
+var controlling: bool = true
+var relative: Vector2 = Vector2.ZERO
 
 # Allows ESC to bring the mouse back to screen
 func _input(event):
@@ -14,37 +14,43 @@ func _input(event):
 		relative = event.relative
 	if event.is_action_pressed("ui_cancel"):
 		if controlling:
-			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		else:			
-			Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		controlling = !controlling
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)  # Mouse becomes visible
+		else:
+			Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)   # Mouse becomes hidden
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)  # Capture mouse
+		controlling = !controlling  # Toggle controlling flag
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)  # Initially capture the mouse
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	rotate(Vector3.DOWN, deg_to_rad(relative.x * deg_to_rad(rot_speed) * delta))
-	rotate(transform.basis.x,deg_to_rad(- relative.y * deg_to_rad(rot_speed) * delta))
-	relative = Vector2.ZERO
+	# Rotation based on axis input (joystick or keyboard)
+	var yaw = Input.get_axis("look_left", "look_right")  # Left/Right rotation (look_left, look_right)
+	var pitch = Input.get_axis("look_up", "look_down")  # Up/Down rotation (look_up, look_down)
+
+	# Apply the rotation to the player
+	if yaw != 0:
+		rotate(Vector3.UP, deg_to_rad(yaw * rot_speed * delta))  # Horizontal rotation (yaw)
+	if pitch != 0:
+		rotate(transform.basis.x, deg_to_rad(-pitch * rot_speed * delta))  # Vertical rotation (pitch)
+
+	# Player movement based on input
 	if can_move:
 		var v = Vector3.ZERO
-		
 		var mult = 1
+
+		# Sprint when shift is pressed
 		if Input.is_key_pressed(KEY_SHIFT):
 			mult = 3
-		
-		var turn = Input.get_axis("turn_left", "turn_right") - v.x
-		if abs(turn) > 0:   
-			position = position + global_transform.basis.x * speed * turn * mult * delta
-			# global_translate(global_transform.basis.x * speed * turn * mult * delta)
-		
+
+		# Left/Right movement (strafe)
+		var turn = Input.get_axis("move_left", "move_right")
+		if abs(turn) > 0:
+			position += global_transform.basis.x * speed * turn * mult * delta
+
+		# Forward/Backward movement (move along the Z-axis)
 		var movef = Input.get_axis("move_forward", "move_back")
-		if abs(movef) > 0:     
+		if abs(movef) > 0:
 			global_translate(global_transform.basis.z * speed * movef * mult * delta)
-		
-		var upanddown = Input.get_axis("move_up", "move_down")
-		if abs(upanddown) > 0:     
-			global_translate(- global_transform.basis.y * speed * upanddown * mult * delta)
