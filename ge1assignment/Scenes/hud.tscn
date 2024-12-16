@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cce1y0vsvl25c"]
 
-[ext_resource type="Script" path="res://Einteract.gd" id="2_2yeqv"]
+[ext_resource type="Script" path="res://Scripts/button/Einteract.gd" id="2_2yeqv"]
 [ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="3_ftqy6"]
 [ext_resource type="Texture2D" uid="uid://cq4c35i7ewlvv" path="res://addons/kenney_onscreen-controls/Sprites/flat-dark/flatDark16.png" id="6_3tfhf"]
 

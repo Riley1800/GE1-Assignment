@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://bokpgq6ycxl13"]
+[gd_scene load_steps=14 format=3 uid="uid://bokpgq6ycxl13"]
 
 [ext_resource type="Script" path="res://Scripts/music_project.gd" id="1_rjsam"]
 [ext_resource type="Script" path="res://Scripts/FPController.gd" id="2_m26jr"]
 [ext_resource type="PackedScene" uid="uid://cce1y0vsvl25c" path="res://Scenes/hud.tscn" id="4_obgkx"]
 [ext_resource type="PackedScene" uid="uid://c3l15svf62m7b" path="res://Scenes/Sequencer.tscn" id="5_7y2a2"]
 [ext_resource type="Material" uid="uid://dvo75cymypytd" path="res://Materials/green.tres" id="6_84a1n"]
+[ext_resource type="Texture2D" uid="uid://c6dtvfh45ankb" path="res://addons/center_cursor.png" id="6_p8m52"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_d1eg7"]
 height = 4.24118
@@ -96,7 +97,23 @@ offset_bottom = 40.0
 [node name="HUD" parent="Control" instance=ExtResource("4_obgkx")]
 
 [node name="InteractionLabel2" type="Label" parent="Control/HUD"]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 49.0
+offset_bottom = 31.0
+
+[node name="CenterCursor" type="TextureRect" parent="Control/HUD"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_p8m52")
 
 [connection signal="timeout" from="sequencer2/Timer" to="sequencer2" method="_on_timer_timeout"]
