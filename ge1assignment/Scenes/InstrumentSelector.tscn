@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5yaodex4n8un"]
+
+[ext_resource type="PackedScene" path="res://Scripts/button/ButtonVariation.tscn" id="1_0k8bn"]
+
+[node name="InstrumentSelector" type="Marker3D"]
+
+[node name="Instrument" parent="." instance=ExtResource("1_0k8bn")]
