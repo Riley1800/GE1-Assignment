@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dgmra25vsktlp"]
 
-[ext_resource type="PackedScene" path="res://Scripts/button/ButtonVariation.tscn" id="1_ceom1"]
+[ext_resource type="PackedScene" uid="uid://degqyeq3t11kb" path="res://Scripts/button/ButtonVariation.tscn" id="1_ceom1"]
 
 [node name="StepSelector" type="Marker3D"]
 

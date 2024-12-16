@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dmmrvk37qelgb" path="res://addons/kenney_prototype-kit/Models/GLB format/column-low.glb" id="2_2s5i4"]
 [ext_resource type="PackedScene" uid="uid://dmyskn8bdwp1p" path="res://addons/kenney_prototype-kit/Models/GLB format/button-floor-round-small.glb" id="3_o7sx3"]
 [ext_resource type="Script" path="res://addons/kenney_prototype-kit/Models/GLB format/button1.gd" id="4_ml116"]
-[ext_resource type="PackedScene" path="res://Scripts/button/ButtonVariation.tscn" id="5_mhsd7"]
+[ext_resource type="PackedScene" uid="uid://degqyeq3t11kb" path="res://Scripts/button/ButtonVariation.tscn" id="5_mhsd7"]
 [ext_resource type="PackedScene" uid="uid://c5yaodex4n8un" path="res://Scenes/InstrumentSelector.tscn" id="6_141y4"]
 [ext_resource type="PackedScene" uid="uid://dgmra25vsktlp" path="res://Scenes/StepSelector.tscn" id="7_tback"]
 
@@ -73,10 +73,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.501983, -2.65486)
 mesh = SubResource("BoxMesh_x6n7m")
 
 [node name="InstrumentSelector" parent="TheWall" instance=ExtResource("6_141y4")]
+transform = Transform3D(-0.997452, 0, -0.0713407, 0, 1, 0, 0.0713407, 0, -0.997452, -0.234851, 0.263405, 0.496216)
 
 [node name="Label3D" type="Label3D" parent="TheWall/InstrumentSelector"]
 
 [node name="StepSelector" parent="TheWall" instance=ExtResource("7_tback")]
+transform = Transform3D(-0.999841, 0, -0.0178537, 0, 1, 0, 0.0178537, 0, -0.999841, -0.0135629, -0.121711, 0.490629)
 
 [node name="Label3D" type="Label3D" parent="TheWall/StepSelector"]
 

@@ -7,11 +7,11 @@ var spacer = 1.1
 
 @export var font:Font
 @export var path_str = "res://samples/"
-@export var pad_scene:PackedScene
+@export var pad_scene:PackedScene = preload("res://Scripts/Button/ButtonVariation.tscn")
 @export var steps = 8
 @onready var timer = $Timer
 @onready var timer_ball = $timer_ball
-@onready var steps_marker = $TheWall/Steps_Marker
+@onready var steps_marker = $TheWall/steps_marker
 @onready var Instruments_marker = $TheWall/Instruments_marker
 @onready var TheWall = $TheWall
 
@@ -108,37 +108,52 @@ func _on_timer_timeout() -> void:
 	print("step " + str(step))
 	play_step(step)
 	step = (step + 1) % steps
-	pass # Replace with function body.
+	pass 
 	
 func steps_designer():
-	var margin = .004
+	var margin = 0.1
+
 	if !step_segments.is_empty():
-		for i in range(step_segments.size()):
-			step_segments[i].queue_free()
+		for segment in step_segments:
+			segment.queue_free()  # Remove old step buttons
 		step_segments.clear()
+
+	# Create new step buttons
 	for step in range(steps):
-		var step_segments = pad_scene.instantiate()
-		var sb_pos = steps_marker.position + Vector3((step_segments.get_child(1).mesh.size.x + margin) * step , 0, 0)
-		step_segments.position = sb_pos
-		step_segments.rotation = rotation
-		step_segments.get_child(3).set_text("Step: " + str(step + 1))
-		add_child(step_segments)
-		step_segments.push_back(step_segments)
+		var button = pad_scene.instantiate()  # Instantiate a 3D button
+		var x_pos = step * margin  # Position based on step index
+		var y_pos = 0  # All steps on the same Y-plane
+		var z_pos = 0  # All steps on the same Z-plane
+		button.transform.origin = Vector3(x_pos, y_pos, z_pos)
+
+		button.text = "Step: " + str(step + 1)  # Set button label
+		
+		button.connect("pressed", Callable(self, "toggle_step").bind(step))
+
+		add_child(button) 
+		step_segments.push_back(button)  
+
 
 func Instrument_line():
-	var margin = 0.004
-	var rowSize = steps
-	var row = 0
+	var margin = 0.1  # Spacing between buttons in 3D
+	var row_size = steps  # Number of buttons per row
+	
 	for instrument in range(samples.size()):
-		row = -(instrument / rowSize)
-		var pad = pad_scene.instantiate()
-		var p = Instruments_marker.position + Vector3((pad.get_child(1).mesh.size.x + margin) * (instrument % rowSize), s * row * (spacer * 1.3), 0)
-		pad.position = p
-		pad.rotation = rotation
-		pad.area_entered.connect(toggle_pad.bind(instrument))
-		pad.get_child(3).set_text(file_names[instrument].left(10))
-		add_child(pad)
-		pads.push_back(pad)
+		var button = pad_scene.instantiate()  
+		var x_pos = (instrument % row_size) * margin
+		var y_pos = -(instrument / row_size) * margin
+		var z_pos = 0  # Keep all buttons on the same Z-plane
+		button.transform.origin = Vector3(x_pos, y_pos, z_pos)  # Position buttons in a grid
+		
+		# Configure the button
+		button.text = file_names[instrument].left(10) 
+		
+		# Correct connection with Callable
+		button.connect("pressed", Callable(self, "toggle_pad").bind(instrument)) 
+		
+		add_child(button) 
+		pads.push_back(button)  
+
 
 func init_steps():
 	for i in range(samples.size()):

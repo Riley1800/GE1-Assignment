@@ -32,9 +32,9 @@ func _process(delta):
 
 	# Apply the rotation to the player
 	if yaw != 0:
-		rotate(Vector3.UP, deg_to_rad(yaw * rot_speed * delta))  # Horizontal rotation (yaw)
+		rotate(Vector3.UP, deg_to_rad(yaw * rot_speed * delta))  
 	if pitch != 0:
-		rotate(transform.basis.x, deg_to_rad(-pitch * rot_speed * delta))  # Vertical rotation (pitch)
+		rotate(transform.basis.x, deg_to_rad(-pitch * rot_speed * delta)) 
 
 	# Player movement based on input
 	if can_move:
@@ -45,12 +45,12 @@ func _process(delta):
 		if Input.is_key_pressed(KEY_SHIFT):
 			mult = 3
 
-		# Left/Right movement (strafe)
+		# Left/Right movement 
 		var turn = Input.get_axis("move_left", "move_right")
 		if abs(turn) > 0:
 			position += global_transform.basis.x * speed * turn * mult * delta
 
-		# Forward/Backward movement (move along the Z-axis)
+		# Forward/Backward movement
 		var movef = Input.get_axis("move_forward", "move_back")
 		if abs(movef) > 0:
 			global_translate(global_transform.basis.z * speed * movef * mult * delta)

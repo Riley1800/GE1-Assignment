@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://cce1y0vsvl25c"]
+[gd_scene load_steps=3 format=3 uid="uid://cce1y0vsvl25c"]
 
-[ext_resource type="Script" path="res://Scripts/button/Einteract.gd" id="2_2yeqv"]
 [ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="3_ftqy6"]
 [ext_resource type="Texture2D" uid="uid://cq4c35i7ewlvv" path="res://addons/kenney_onscreen-controls/Sprites/flat-dark/flatDark16.png" id="6_3tfhf"]
 
@@ -10,7 +9,7 @@
 position = Vector2(958, 184)
 scale = Vector2(2.85417, 2.45833)
 texture_normal = ExtResource("6_3tfhf")
-script = ExtResource("2_2yeqv")
+action = "Interact"
 
 [node name="VirtualJoystickMove" parent="." instance=ExtResource("3_ftqy6")]
 action_left = "move_left"
