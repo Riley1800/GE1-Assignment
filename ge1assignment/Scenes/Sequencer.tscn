@@ -63,6 +63,7 @@ transform = Transform3D(-0.983041, 0, 0.183385, 0, 1, 0, -0.183385, 0, -0.983041
 
 [node name="8Step" parent="." instance=ExtResource("5_mhsd7")]
 transform = Transform3D(-0.983041, 0, 0.183385, 0, 1, 0, -0.183385, 0, -0.983041, 0.200298, 0.380018, 0.459714)
+visible = false
 
 [node name="Reverb" parent="." instance=ExtResource("5_mhsd7")]
 transform = Transform3D(-0.983041, 0, 0.183385, 0, 1, 0, -0.183385, 0, -0.983041, -0.0717831, 0.238695, 0.311347)
